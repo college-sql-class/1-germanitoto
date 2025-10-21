@@ -37,3 +37,8 @@ def test_delete_student():
     cur.execute("SELECT * FROM students WHERE id = 2;")
     result = cur.fetchone()
     assert result is None, f"Студент с id=2 должен быть удален, найдено {result}"
+if __name__ == "__main__":
+    test_update_student()
+    test_delete_student()
+    print("Проверка пройдена успешно!")
+
